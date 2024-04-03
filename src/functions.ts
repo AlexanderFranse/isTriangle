@@ -18,6 +18,15 @@ function twoOrAllParametersEquals(
   }
   return false;
 }
+function isSideLengthNotTooLong(sideA: number, sideB: number, sideC: number) {
+  // eslint-disable-next-line prettier/prettier
+  if (sideA + sideB > sideC && 
+      sideA + sideC > sideB &&
+      sideB + sideC > sideA) {
+    return true;
+  }
+  return false;
+}
 export function isTriangleRefactored(
   sideA: number,
   sideB: number,
@@ -25,6 +34,7 @@ export function isTriangleRefactored(
 ) {
   return (
     allParametersMoreThenZero(sideA, sideB, sideC) &&
-    twoOrAllParametersEquals(sideA, sideB, sideC)
+    twoOrAllParametersEquals(sideA, sideB, sideC) &&
+    isSideLengthNotTooLong(sideA, sideB, sideC)
   );
 }

@@ -23,6 +23,13 @@ I have received parameter values and I want to check if you can make a triangle 
       const c = 3;
       expect(isTriangleRefactored(a, b, c)).toBeFalsy();
     });
+
+    it("One parameter has a larger value then other parameters", () => {
+      const a = 7;
+      const b = 2;
+      const c = 2;
+      expect(isTriangleRefactored(a, b, c)).toBeFalsy();
+    });
   });
 
   describe("return true if", () => {
