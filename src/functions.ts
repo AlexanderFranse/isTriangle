@@ -1,8 +1,4 @@
-function allParametersMoreThenZero(
-  sideA: number,
-  sideB: number,
-  sideC: number
-) {
+function allParametersZeroOrLess(sideA: number, sideB: number, sideC: number) {
   if (sideA <= 0 || sideB <= 0 || sideC <= 0) {
     return false;
   }
@@ -18,14 +14,24 @@ function twoOrAllParametersEquals(
   }
   return false;
 }
-function isSideLengthNotTooLong(sideA: number, sideB: number, sideC: number) {
-  // eslint-disable-next-line prettier/prettier
-  if (sideA + sideB > sideC && 
-      sideA + sideC > sideB &&
-      sideB + sideC > sideA) {
-    return true;
+function isParameterSmallerThenSumOfRemainingParameters(
+  sideA: number,
+  sideB: number,
+  sideC: number
+) {
+  const sumBC = sideB + sideC;
+  const sumAC = sideA + sideC;
+  const sumAB = sideA + sideB;
+  if (sumBC < sideA) {
+    return false;
   }
-  return false;
+  if (sumAC < sideB) {
+    return false;
+  }
+  if (sumAB < sideC) {
+    return false;
+  }
+  return true;
 }
 export function isTriangleRefactored(
   sideA: number,
@@ -33,8 +39,8 @@ export function isTriangleRefactored(
   sideC: number
 ) {
   return (
-    allParametersMoreThenZero(sideA, sideB, sideC) &&
+    allParametersZeroOrLess(sideA, sideB, sideC) &&
     twoOrAllParametersEquals(sideA, sideB, sideC) &&
-    isSideLengthNotTooLong(sideA, sideB, sideC)
+    isParameterSmallerThenSumOfRemainingParameters(sideA, sideB, sideC)
   );
 }

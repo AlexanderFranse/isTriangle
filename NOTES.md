@@ -1,9 +1,3 @@
-//TODO
-- retrieve dockeruser name / password from env variables ✅
--  set docker username/password in GIT ✅
--  Make a snyk project?
--  Add Dockerfile to the cookie cutter ⚡
-
 Implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length and false in any other case.
 
 (In this case, all triangles must have surface greater than 0 to be accepted).
@@ -33,3 +27,22 @@ Input -> Output
    ✅ Modified first describe to a more concrete story
    ✅ Improve isTriangle function
    ✅ 100% code coverage
+
+# Feedback Peer review
+
+Notes niet correct bijgehouden. Bijhouden per pomodoro.
+Complexity te hoog
+Testen lezen niet als een boek
+De units zelf worden niet getest, alleen de hoofdfunctie
+Testen lijken niet in lijn met de code
+eslint disable?
+Naamgeving komt niet overeen met wat de code doet, kan ook beter
+
+  
+# Pomodoro 1
+   Refactor test description and code complexity
+    ✅ - Improve text
+    🤲 - Reduce code complexity
+    ✅ - Rename function name 
+
+# Pomodoro 2
