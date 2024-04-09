@@ -40,9 +40,20 @@ Naamgeving komt niet overeen met wat de code doet, kan ook beter
 
   
 # Pomodoro 1
-   Refactor test description and code complexity
+   Refactor test description, function names and code complexity
     ✅ - Improve text
-    🤲 - Reduce code complexity
-    ✅ - Rename function name 
+    🤲 - Reduce code complexity 
+    ✅ - Rename function names
 
-# Pomodoro 2
+# Pomodoro 2 
+  - ✅ Refactor: unit test all functions, not only main function
+       ✅ - unit test all functions 
+
+  - ✅ Refactor: Reduce code complexity
+       🤲 - Refactor functions with complexity higher then 8
+
+  - ✅ Gain 100% code coverage
+
+# Pomodoro 3
+  ✅ Cover all testcases (codewars)
+  ✅ Refactor twoOrAllParametersEquals function
