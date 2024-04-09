@@ -1,3 +1,4 @@
+// TODO: deze functie doet niet wat ie zegt dat ie zou doen.
 export function allParametersZeroOrLess(
   sideA: number,
   sideB: number,
@@ -8,6 +9,8 @@ export function allParametersZeroOrLess(
   }
   return true;
 }
+
+// TODO: complexity is nog steeds te hoog
 export function isParameterSmallerThenSumOfRemainingParameters(
   sideA: number,
   sideB: number,
@@ -27,6 +30,7 @@ export function isParameterSmallerThenSumOfRemainingParameters(
   }
   return true;
 }
+// TODO: hier klopt iets niet.
 export function isTriangle(sideA: number, sideB: number, sideC: number) {
   return (
     allParametersZeroOrLess(sideA, sideB, sideC) &&
